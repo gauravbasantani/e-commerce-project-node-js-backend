@@ -21,7 +21,7 @@ app.use((req, res, next)=>{
     next();
 });
 
-mongoose.connect("mongodb+srv://gaurav:Ganesh@1228@gauravcluster.guvu1tg.mongodb.net/ecommerce");
+mongoose.connect("mongodb+srv://gaurav:Gaurav123@gauravcluster.guvu1tg.mongodb.net/ecommerce");
 let db = mongoose.connection;
 db.on("error", error=> console.log(error));
 db.on("open", ()=> console.log("Connection Established"));
