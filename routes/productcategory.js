@@ -1,3 +1,7 @@
+// "__v": 0,
+// "imagepath": "productcategories/1t1fjf.png",
+// "name": "Shoes",
+// "srno": 1
 let express = require("express");
 let bodyparser = require("body-parser");
 let Productcategory = require("../models/Productcategory");

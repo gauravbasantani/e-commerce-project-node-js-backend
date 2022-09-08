@@ -21,7 +21,7 @@ app.use((req, res, next)=>{
     next();
 });
 
-mongoose.connect("mongodb://localhost:27017/ecommerceproject");
+mongoose.connect("mongodb+srv://gaurav:Ganesh@1228@gauravcluster.guvu1tg.mongodb.net/ecommerce");
 let db = mongoose.connection;
 db.on("error", error=> console.log(error));
 db.on("open", ()=> console.log("Connection Established"));
@@ -31,7 +31,7 @@ app.get("/", function(req, res){
     res.send("Welcome to E-Commerce Back End");
     res.end();
 });
-
+const PORT = process.env.PORT || 3000
 app.use("/admin", require("./routes/admin"));
 app.use("/productcategory", require("./routes/productcategory"));
 app.use("/product", require("./routes/product"));
